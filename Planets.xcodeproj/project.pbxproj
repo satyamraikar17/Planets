@@ -16,6 +16,14 @@
 		8B04B15021E5ED6800CCACEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B04B14F21E5ED6800CCACEC /* main.m */; };
 		8B04B15A21E5ED6800CCACEC /* PlanetsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B04B15921E5ED6800CCACEC /* PlanetsTests.m */; };
 		8B04B16521E5ED6800CCACEC /* PlanetsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B04B16421E5ED6800CCACEC /* PlanetsUITests.m */; };
+		8B04B17421E5EF6500CCACEC /* CommunicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B04B17321E5EF6500CCACEC /* CommunicationManager.m */; };
+		8B04B18121E5F62500CCACEC /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B04B18021E5F62500CCACEC /* Parser.m */; };
+		8B04B18621E6044800CCACEC /* PlanetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B04B18521E6044800CCACEC /* PlanetsManager.m */; };
+		8B04B18921E6118D00CCACEC /* PlanetDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B04B18821E6118D00CCACEC /* PlanetDataManager.m */; };
+		8B04B19A21E61AAF00CCACEC /* Planet+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B04B19721E61AAF00CCACEC /* Planet+CoreDataClass.m */; };
+		8B04B19B21E61AAF00CCACEC /* Planet+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B04B19921E61AAF00CCACEC /* Planet+CoreDataProperties.m */; };
+		8B962BBB21E6301400B63946 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B962BBA21E6301400B63946 /* QuartzCore.framework */; };
+		8B962BBD21E63ADB00B63946 /* 245a26221c9dc7d614257051870890e1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B962BBC21E63ADA00B63946 /* 245a26221c9dc7d614257051870890e1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +61,22 @@
 		8B04B16021E5ED6800CCACEC /* PlanetsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B04B16421E5ED6800CCACEC /* PlanetsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlanetsUITests.m; sourceTree = "<group>"; };
 		8B04B16621E5ED6800CCACEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B04B17321E5EF6500CCACEC /* CommunicationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunicationManager.m; sourceTree = "<group>"; };
+		8B04B17521E5EF8200CCACEC /* CommunicationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunicationManager.h; sourceTree = "<group>"; };
+		8B04B17621E5F1F200CCACEC /* CommunicationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunicationDelegate.h; sourceTree = "<group>"; };
+		8B04B17F21E5F61500CCACEC /* Parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
+		8B04B18021E5F62500CCACEC /* Parser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
+		8B04B18321E603FD00CCACEC /* PlanetsManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlanetsManagerDelegate.h; sourceTree = "<group>"; };
+		8B04B18421E6042800CCACEC /* PlanetsManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlanetsManager.h; sourceTree = "<group>"; };
+		8B04B18521E6044800CCACEC /* PlanetsManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlanetsManager.m; sourceTree = "<group>"; };
+		8B04B18721E6117B00CCACEC /* PlanetDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlanetDataManager.h; sourceTree = "<group>"; };
+		8B04B18821E6118D00CCACEC /* PlanetDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlanetDataManager.m; sourceTree = "<group>"; };
+		8B04B19621E61AAF00CCACEC /* Planet+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Planet+CoreDataClass.h"; sourceTree = "<group>"; };
+		8B04B19721E61AAF00CCACEC /* Planet+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Planet+CoreDataClass.m"; sourceTree = "<group>"; };
+		8B04B19821E61AAF00CCACEC /* Planet+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Planet+CoreDataProperties.h"; sourceTree = "<group>"; };
+		8B04B19921E61AAF00CCACEC /* Planet+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Planet+CoreDataProperties.m"; sourceTree = "<group>"; };
+		8B962BBA21E6301400B63946 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8B962BBC21E63ADA00B63946 /* 245a26221c9dc7d614257051870890e1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 245a26221c9dc7d614257051870890e1.jpg; path = ../../../245a26221c9dc7d614257051870890e1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B962BBB21E6301400B63946 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +112,7 @@
 				8B04B15821E5ED6800CCACEC /* PlanetsTests */,
 				8B04B16321E5ED6800CCACEC /* PlanetsUITests */,
 				8B04B13B21E5ED6800CCACEC /* Products */,
+				8B962BB921E6301400B63946 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +129,10 @@
 		8B04B13C21E5ED6800CCACEC /* Planets */ = {
 			isa = PBXGroup;
 			children = (
+				8B04B18221E603E300CCACEC /* PlanetsManager */,
+				8B04B17E21E5F5DF00CCACEC /* Parser */,
+				8B04B17D21E5F3E200CCACEC /* Data */,
+				8B04B17221E5EEF100CCACEC /* Communication */,
 				8B04B13D21E5ED6800CCACEC /* AppDelegate.h */,
 				8B04B13E21E5ED6800CCACEC /* AppDelegate.m */,
 				8B04B14021E5ED6800CCACEC /* ViewController.h */,
@@ -111,6 +141,7 @@
 				8B04B14921E5ED6800CCACEC /* Assets.xcassets */,
 				8B04B14B21E5ED6800CCACEC /* LaunchScreen.storyboard */,
 				8B04B14E21E5ED6800CCACEC /* Info.plist */,
+				8B962BBC21E63ADA00B63946 /* 245a26221c9dc7d614257051870890e1.jpg */,
 				8B04B14F21E5ED6800CCACEC /* main.m */,
 				8B04B14621E5ED6800CCACEC /* Planets.xcdatamodeld */,
 			);
@@ -133,6 +164,56 @@
 				8B04B16621E5ED6800CCACEC /* Info.plist */,
 			);
 			path = PlanetsUITests;
+			sourceTree = "<group>";
+		};
+		8B04B17221E5EEF100CCACEC /* Communication */ = {
+			isa = PBXGroup;
+			children = (
+				8B04B17321E5EF6500CCACEC /* CommunicationManager.m */,
+				8B04B17521E5EF8200CCACEC /* CommunicationManager.h */,
+				8B04B17621E5F1F200CCACEC /* CommunicationDelegate.h */,
+			);
+			path = Communication;
+			sourceTree = "<group>";
+		};
+		8B04B17D21E5F3E200CCACEC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8B04B19621E61AAF00CCACEC /* Planet+CoreDataClass.h */,
+				8B04B19721E61AAF00CCACEC /* Planet+CoreDataClass.m */,
+				8B04B19821E61AAF00CCACEC /* Planet+CoreDataProperties.h */,
+				8B04B19921E61AAF00CCACEC /* Planet+CoreDataProperties.m */,
+				8B04B18721E6117B00CCACEC /* PlanetDataManager.h */,
+				8B04B18821E6118D00CCACEC /* PlanetDataManager.m */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8B04B17E21E5F5DF00CCACEC /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				8B04B17F21E5F61500CCACEC /* Parser.h */,
+				8B04B18021E5F62500CCACEC /* Parser.m */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		8B04B18221E603E300CCACEC /* PlanetsManager */ = {
+			isa = PBXGroup;
+			children = (
+				8B04B18321E603FD00CCACEC /* PlanetsManagerDelegate.h */,
+				8B04B18421E6042800CCACEC /* PlanetsManager.h */,
+				8B04B18521E6044800CCACEC /* PlanetsManager.m */,
+			);
+			path = PlanetsManager;
+			sourceTree = "<group>";
+		};
+		8B962BB921E6301400B63946 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B962BBA21E6301400B63946 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +325,7 @@
 				8B04B14D21E5ED6800CCACEC /* LaunchScreen.storyboard in Resources */,
 				8B04B14A21E5ED6800CCACEC /* Assets.xcassets in Resources */,
 				8B04B14521E5ED6800CCACEC /* Main.storyboard in Resources */,
+				8B962BBD21E63ADB00B63946 /* 245a26221c9dc7d614257051870890e1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,10 +350,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B04B18121E5F62500CCACEC /* Parser.m in Sources */,
+				8B04B17421E5EF6500CCACEC /* CommunicationManager.m in Sources */,
+				8B04B19A21E61AAF00CCACEC /* Planet+CoreDataClass.m in Sources */,
+				8B04B18621E6044800CCACEC /* PlanetsManager.m in Sources */,
+				8B04B18921E6118D00CCACEC /* PlanetDataManager.m in Sources */,
 				8B04B14821E5ED6800CCACEC /* Planets.xcdatamodeld in Sources */,
 				8B04B14221E5ED6800CCACEC /* ViewController.m in Sources */,
 				8B04B15021E5ED6800CCACEC /* main.m in Sources */,
 				8B04B13F21E5ED6800CCACEC /* AppDelegate.m in Sources */,
+				8B04B19B21E61AAF00CCACEC /* Planet+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

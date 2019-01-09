@@ -1,10 +1,3 @@
-//
-//  PlanetsTests.m
-//  PlanetsTests
-//
-//  Created by iRohan on 09/01/19.
-//  Copyright © 2019 satyamraikar17. All rights reserved.
-//
 
 #import <XCTest/XCTest.h>
 
