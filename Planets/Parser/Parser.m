@@ -1,4 +1,5 @@
 #import "Parser.h"
+#import "PlanetParserDelegate.h"
 
 @implementation Parser
 
@@ -18,10 +19,16 @@
 
 @implementation PlanetParser
 
-+ (NSDictionary *)planets:(NSData *)jsonData error:(NSError *__autoreleasing *)error {
+- (void)planets:(NSData *)jsonData{
     
-    NSDictionary* parsedObject = [Parser parseData:jsonData error:error];
-    return [parsedObject valueForKey:@"results"];
+    NSError* error = nil;
+    NSDictionary* parsedObject = [Parser parseData:jsonData error:&error];
+    if (!error) {
+        [self.delegate didParsePlanets:[parsedObject valueForKey:@"results"]];
+    }
+    else{
+        [self.delegate failedParsePlanets:error];
+    }
 }
 
 @end

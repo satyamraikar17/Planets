@@ -45,6 +45,7 @@
         }
     }
     [context save:&error];
+    [context.parentContext save:&error];
 }
 
 + (Planet*)createPlanetFromDictionary:(NSDictionary *)dict inContext:(NSManagedObjectContext *)context {

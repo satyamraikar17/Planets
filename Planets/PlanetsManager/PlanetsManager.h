@@ -8,6 +8,7 @@
 
 @class CommunicationManager;
 @class NSManagedObjectContext;
+@class PlanetParser;
 
 /*!
  @brief Used to fetch Planets from CoreData and to update core data with latest planets from server
@@ -15,6 +16,7 @@
 */
 @interface PlanetsManager : NSObject
 @property (strong, nonatomic) CommunicationManager *communicator;
+@property (strong, nonatomic) PlanetParser *parser;
 @property (weak, nonatomic) id delegate;
 
 /*!

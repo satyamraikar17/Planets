@@ -5,6 +5,7 @@
 #import "CommunicationManager.h"
 #import "PlanetDataManager.h"
 #import "AppDelegate.h"
+#import "Parser.h"
 
 @implementation PlanetsManager
 
@@ -16,21 +17,26 @@
     return [PlanetDataManager fetchPlanetsForContext:[(AppDelegate *)[[UIApplication sharedApplication] delegate] persistentContainer].viewContext];
 }
 
-#pragma mark - CommunicationDelegate
+#pragma mark - ParserDelegate
 
-- (void)receivedPlanetsJSON:(NSData *)object {
-    NSError *error = nil;
-    NSArray *planets = [PlanetParser planets:object error:&error];
+- (void)failedParsePlanets:(NSError *)error {
+    [self.delegate fetchingPlanetsFailedWithError:error];
+}
+
+- (void)didParsePlanets:(NSArray *)planets {
     
-    if (error != nil) {
-        [self.delegate fetchingPlanetsFailedWithError:error];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSManagedObjectContext* moc = [(AppDelegate *)[[UIApplication sharedApplication] delegate] persistentContainer].viewContext;
         
-    } else {
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
+        dispatch_async(queue, ^{
             NSError *error = nil;
-
-            [PlanetDataManager savePlanets:planets ForContext:[(AppDelegate *)[[UIApplication sharedApplication] delegate] persistentContainer].viewContext error:error];
+            
+            NSManagedObjectContext* privateManagedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+            [privateManagedObjectContext setParentContext:moc];
+            privateManagedObjectContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy;
+            
+            [PlanetDataManager savePlanets:planets ForContext:privateManagedObjectContext error:error];
             
             if (error != nil) {
                 [self.delegate fetchingPlanetsFailedWithError:error];
@@ -39,7 +45,16 @@
                 [self.delegate reloadPlanets];
             }
         });
-    }
+    });
+}
+
+#pragma mark - CommunicationDelegate
+
+- (void)receivedPlanetsJSON:(NSData *)object {
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
+    dispatch_async(queue, ^{
+        [self.parser planets:object];
+    });
 }
 
 - (void)fetchingPlanetsFailedWithError:(NSError *)error {

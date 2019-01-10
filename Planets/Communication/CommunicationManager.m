@@ -5,8 +5,8 @@
 
 @implementation CommunicationManager
 
-- (void)fetchPlanets {
-    NSURL *url = [[NSURL alloc] initWithString:URL];
+- (void)fetchPlanets:(NSString*)url_string {
+    NSURL *url = [[NSURL alloc] initWithString:url_string];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -17,11 +17,18 @@
         if (error) {
             [self.delegate fetchingPlanetsFailedWithError:error];
         } else {
+            
             [self.delegate receivedPlanetsJSON:data];
+            
+            // to do retrieve next page
         }
     }];
     
     [dataTask resume];
+}
+
+- (void)fetchPlanets {
+    [self fetchPlanets:URL];
 }
 
 @end

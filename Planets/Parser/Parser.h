@@ -15,13 +15,14 @@
 
 @interface PlanetParser : Parser
 
+@property (weak, nonatomic) id delegate;
+
 /*!
  @brief Converts JSON data to NSdictionary items of planetary information
+ @discussion Owner of this classs should implement PlanetParserDelegate for callbacks
  @param jsonData JSON data recieved from server
- @param error Populated by method and contains error while parsing data
- @return Array of Planets in NSDictionary format
- */
-+ (NSArray *)planets:(NSData *)jsonData error:(NSError **)error;
+*/
+- (void)planets:(NSData *)jsonData;
 
 @end
 

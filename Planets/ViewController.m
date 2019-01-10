@@ -3,6 +3,8 @@
 #import "PlanetsManager.h"
 #import "Planet+CoreDataProperties.h"
 #import "CommunicationManager.h"
+#import "Parser.h"
+
 #import <QuartzCore/QuartzCore.h>
 
 #define CELLSPACE 1
@@ -50,6 +52,8 @@
     self.manager = [[PlanetsManager alloc] init];
     self.manager.communicator = [[CommunicationManager alloc] init];
     self.manager.communicator.delegate = self.manager;
+    self.manager.parser = [[PlanetParser alloc] init];
+    self.manager.parser.delegate = self.manager;
     self.manager.delegate = self;
     [self.manager reloadPlanets];
     
