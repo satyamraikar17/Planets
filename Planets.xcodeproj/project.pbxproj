@@ -24,6 +24,7 @@
 		8B04B19B21E61AAF00CCACEC /* Planet+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B04B19921E61AAF00CCACEC /* Planet+CoreDataProperties.m */; };
 		8B962BBB21E6301400B63946 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B962BBA21E6301400B63946 /* QuartzCore.framework */; };
 		8B962BBD21E63ADB00B63946 /* 245a26221c9dc7d614257051870890e1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B962BBC21E63ADA00B63946 /* 245a26221c9dc7d614257051870890e1.jpg */; };
+		8B962BC021E7291800B63946 /* CommunicationManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B962BBF21E7291800B63946 /* CommunicationManagerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		8B962BBA21E6301400B63946 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8B962BBC21E63ADA00B63946 /* 245a26221c9dc7d614257051870890e1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 245a26221c9dc7d614257051870890e1.jpg; path = ../../../245a26221c9dc7d614257051870890e1.jpg; sourceTree = "<group>"; };
 		8B962BBE21E6FFE400B63946 /* PlanetParserDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlanetParserDelegate.h; sourceTree = "<group>"; };
+		8B962BBF21E7291800B63946 /* CommunicationManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunicationManagerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			children = (
 				8B04B15921E5ED6800CCACEC /* PlanetsTests.m */,
 				8B04B15B21E5ED6800CCACEC /* Info.plist */,
+				8B962BBF21E7291800B63946 /* CommunicationManagerTests.m */,
 			);
 			path = PlanetsTests;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B962BC021E7291800B63946 /* CommunicationManagerTests.m in Sources */,
 				8B04B15A21E5ED6800CCACEC /* PlanetsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
