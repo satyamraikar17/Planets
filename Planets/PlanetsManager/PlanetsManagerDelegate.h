@@ -1,6 +1,9 @@
 #ifndef PlanetsManagerDelegate_h
 #define PlanetsManagerDelegate_h
 
+/*!
+ @protocol PlanetsManagerDelegate
+ */
 @protocol PlanetsManagerDelegate
 /*!
  @brief Indicates fetching of planets from was sucuessful

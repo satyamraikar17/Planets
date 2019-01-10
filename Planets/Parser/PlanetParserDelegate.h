@@ -1,14 +1,9 @@
-//
-//  PlanetParserDelegate.h
-//  Planets
-//
-//  Created by iRohan on 10/01/19.
-//  Copyright © 2019 satyamraikar17. All rights reserved.
-//
-
 #ifndef PlanetParserDelegate_h
 #define PlanetParserDelegate_h
 
+/*!
+ @protocol PlanetParserDelegate
+*/
 @protocol PlanetParserDelegate
 
 /*!

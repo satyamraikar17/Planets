@@ -6,6 +6,7 @@
 @class Planet;
 @class NSManagedObjectContext;
 /*!
+ @class PlanetDataManager
  @brief Used to save planet data in CoreData and coredata related funtions
 */
 @interface PlanetDataManager : NSObject

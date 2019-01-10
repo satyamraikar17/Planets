@@ -4,6 +4,7 @@
 #import <Foundation/Foundation.h>
 
 /*!
+ @class Parser
  @brief Used to parser JSON data and return filtered data  in dicntionary format
 */
 @interface Parser : NSObject

@@ -11,6 +11,7 @@
 @class PlanetParser;
 
 /*!
+ @class PlanetsManager
  @brief Used to fetch Planets from CoreData and to update core data with latest planets from server
  @dicussion To recive callbacks owner of this class should implement PlanetsManagerDelegate
 */

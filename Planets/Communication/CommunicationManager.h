@@ -3,6 +3,7 @@
 
 #import <Foundation/Foundation.h>
 /*!
+ @class CommunicationManager
  @brief Used to make network calls to server and fetch data
  
  @discussion Owner of this class need to implement CommunicationDelegate methods to recieve callbacks
