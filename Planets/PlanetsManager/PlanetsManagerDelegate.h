@@ -1,19 +1,16 @@
-//
-//  PlanetsManagerDelegate.h
-//  Planets
-//
-//  Created by iRohan on 09/01/19.
-//  Copyright © 2019 satyamraikar17. All rights reserved.
-//
-
 #ifndef PlanetsManagerDelegate_h
 #define PlanetsManagerDelegate_h
 
 @protocol PlanetsManagerDelegate
-
-// Indicates fetching of planets from was sucuessful
+/*!
+ @brief Indicates fetching of planets from was sucuessful
+*/
 - (void)reloadPlanets;
 
+/*!
+ @brief Indicates failure while fetching planets
+ @param error contains error information
+ */
 - (void)fetchingPlanetsFailedWithError:(NSError *)error;
 @end
 

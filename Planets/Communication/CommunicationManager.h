@@ -2,14 +2,21 @@
 #define CommunicationManager_h
 
 #import <Foundation/Foundation.h>
+/*!
+ @brief Used to make network calls to server and fetch data
+ 
+ @discussion Owner of this class need to implement CommunicationDelegate methods to recieve callbacks
+*/
 
-// This call is used to make network calls to server and fetch data
-// Owner of this class need to implement CommunicationDelegate methods to recieve callbacks
 @interface CommunicationManager : NSObject
 
 @property (weak, nonatomic) id delegate;
 
-// fetch data from server
+/*!
+ @brief Used to make network calls to server and fetch Planet JSON data
+ 
+ @discussion Owner of this class need to implement CommunicationDelegate methods to recieve callbacks and JSON data
+ */
 - (void)fetchPlanets;
 
 @end

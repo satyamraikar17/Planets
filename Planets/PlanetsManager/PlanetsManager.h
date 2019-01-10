@@ -1,4 +1,3 @@
-
 #ifndef PlanetsManager_h
 #define PlanetsManager_h
 
@@ -10,17 +9,25 @@
 @class CommunicationManager;
 @class NSManagedObjectContext;
 
-// This class is used to fetch Planets from coredata
-// Also to update core data with latest planets from server
-// To recive callbacks owner of this class should implement PlanetsManagerDelegate
+/*!
+ @brief Used to fetch Planets from CoreData and to update core data with latest planets from server
+ @dicussion To recive callbacks owner of this class should implement PlanetsManagerDelegate
+*/
 @interface PlanetsManager : NSObject
 @property (strong, nonatomic) CommunicationManager *communicator;
 @property (weak, nonatomic) id delegate;
 
-// Update core data by fetching planets from server
+/*!
+ @brief Update core data by fetching planets from server
+ @discussion Delegate methods called with result
+*/
 - (void)reloadPlanets;
 
-// Get saved planets from core data
+/*!
+@brief Get saved planets from core data
+@discussion Delegate methods called with result
+@return Array of Planet* NSManagedObjects
+*/
 - (NSArray*)fetchPlanets;
 
 @end

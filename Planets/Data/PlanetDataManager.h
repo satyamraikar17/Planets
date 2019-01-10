@@ -1,11 +1,3 @@
-//
-//  PlanetDataManager.h
-//  Planets
-//
-//  Created by iRohan on 09/01/19.
-//  Copyright © 2019 satyamraikar17. All rights reserved.
-//
-
 #ifndef PlanetDataManager_h
 #define PlanetDataManager_h
 
@@ -13,20 +5,30 @@
 
 @class Planet;
 @class NSManagedObjectContext;
-
-// This class is used to save planet data in CoreData
-// and coredata related funtions
+/*!
+ @brief Used to save planet data in CoreData and coredata related funtions
+*/
 @interface PlanetDataManager : NSObject
 
-// Returns NSManagedObject
-// Converts dictionary data to NSManagedObject
+/*!
+ @brief Converts NSDictionary object to NSManagedObject
+ @param dict NSDictionary representation of a Planet
+ @param context NSManagedObjectContext used to store object
+ @return NSManagedObject Planet* to be store in Coredata
+*/
 + (Planet *) createPlanetFromDictionary:(NSDictionary*)dict inContext:(NSManagedObjectContext*)context;
 
-// Fetch all planets saved in core data
+/*!
+ @brief Fetch all Planets saved in core data
+ @param context NSManagedObjectContext used to retrieve objects
+ @return Array of NSManagedObject Planet* from Core data
+*/
 + (NSArray *) fetchPlanetsForContext:(NSManagedObjectContext*)context;
 
-// Save planets array in core data
-// NSManagedObject array is accepted as parameter
+/*!
+ @brief Save Planets array in core data
+ @param planets Array of NSManagedObject Planet*
+*/
 + (void) savePlanets:(NSArray*)planets ForContext:(NSManagedObjectContext*)context error:(NSError*)error;
 
 @end
